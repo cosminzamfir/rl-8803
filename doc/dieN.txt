@@ -1,0 +1,31 @@
+The game DieN is played in the following way.
+
+Consider a die with N sides (where N is an integer greater than 1 and less than 30) and a nonempty set B of integers between 1 and N (inclusive). The rules of the game are:
+- You start with 0 dollars.
+- Roll an N-sided die with a different number from 1 to N printed on each side.
+- If you roll a number not in B, you receive that many dollars. (E.g., if you roll the number 2 and 2 is not in B, then you receive 2 dollars.)
+- If you roll a number in B, then you lose all of your obtained money and the game ends.
+- After you roll the die (and don't roll a number in B), you have the option to quit the game. If you quit, you keep all the money you've earned to that point. If you continue to roll, go back to step 2.
+
+For this problem, determine an optimal policy for playing the game DieN with N sides. 
+You will be given N and an array B (isBadSides) which indicates which sides are bad. The policy should depend on your current bankroll. 
+You will be expected to find the expected value of the game if you follow the optimal policy.  Your answer will graded to 0.001 precision.
+
+This HW is designed to help you think about concepts from Lecture 1 “MDPs and Planning” like MDPs, Transitions, Rewards and basic Planning algorithms like Value Iteration.  
+As well as representing a problem as an MDP and finding the optimal policy and expected value.
+
+You will be given 8 tests cases that you will need to solve and give the expected value for each.  You may use any programming language and libraries you would like.
+
+Sample Test Cases
+Note: for “isBadSides” array 1 represents a bad side and 0 represents a good side
+N=4,
+B={0,1,1,1,}
+expectedValue = 0.25
+
+N=8
+B={1,0,1,0,1,1,1,0,}
+expectedValue = 1.8125
+
+N=6
+B={1,0,1,1,0,1,}
+expectedValue = 1.1666
