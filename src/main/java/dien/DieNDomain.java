@@ -13,6 +13,7 @@ import burlap.oomdp.singleagent.SADomain;
 
 public class DieNDomain implements DomainGenerator {
 
+	public static int MAX_VALUE = 1000;
 	public static final String CLASS_AGENT = "agent";
 	public static final String ACTION_ROLL = "roll";
 	public static final String STATE_CURRENT_AMOUNT = "currentAmount";

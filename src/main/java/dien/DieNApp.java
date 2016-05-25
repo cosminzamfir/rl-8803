@@ -21,13 +21,11 @@ public class DieNApp {
 		DieNReward rf = new DieNReward();
 		DieNTerminalState tf = new DieNTerminalState();
 		State initialState = generator.createInitialState(domain);
+		
 		ValueIteration vi = new ValueIteration(domain, rf, tf, 1, new SimpleHashableStateFactory(), 1, 100);
 		vi.toggleReachabiltiyTerminalStatePruning(true);
 		vi.planFromState(initialState);
-		List<QValue> l = vi.getQs(initialState);
-		for (QValue qValue : l) {
-			System.out.println("Q-Value for " + qValue.a + " = " + qValue.q);
-		}
+		System.out.println("Optimal value: " + vi.value(initialState));
 		System.out.println("=========================");
 
 	}
